@@ -1,6 +1,8 @@
 const fs = require('fs')
 const colors = require('colors')
 
+const folder = './tablas'
+
 const crearArchivo = async(base = 5,listar = false,alcance = 10) => {
     try{
         let salida,salidaPura = `===========================
@@ -18,6 +20,9 @@ const crearArchivo = async(base = 5,listar = false,alcance = 10) => {
             }
         }
         if (listar) console.log(salida)
+        if(!fs.existsSync(folder)){
+            fs.mkdirSync(folder)
+        }
         fs.writeFileSync(`tablas/tabla-${base}.txt`,salidaPura);
         if (salida) {
             return (`tabla-${base}.txt`.green);
