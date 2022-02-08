@@ -1,7 +1,7 @@
 Notas:
 
 Este es mi decimotercer programa en Node
-
+```
 Options:
       --help     Show help                  [boolean]
       --version  Show version number        [boolean]
@@ -10,3 +10,4 @@ Options:
   -l, --listar   Muestra la tabla en consola[boolean]
   -a, --alcance  Alcance de la operacion
                                [number] [default: 10]
+```
